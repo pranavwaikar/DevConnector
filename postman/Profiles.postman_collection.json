@@ -1,0 +1,206 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Profiles",
+		"_postman_id": "cb33ab8e-3892-d925-96a1-874bac96d038",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create and update profiles",
+			"request": {
+				"url": "http://localhost:5000/api/profile",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBiMDgwYzhhMTE0MjMxNDFkY2I3MjhlIn0sImlhdCI6MTYyMjE4MDA0MCwiZXhwIjoxNjIyMjE2MDQwfQ.pJC_OYWhhTud9Lsq6E6qmHMkojmJ6cR8TxhZKiv_WUg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"status\": \"Developer\",\n\t\"skills\": \"HTML, css, js,, python\",\n\t\"company\": \"globant\",\n\t\"website\": \"www.pranav.com\",\n\t\"location\": \"nagar\",\n\t\"bio\": \"new developer at globant\",\n\t\"githubusername\": \"pranavwaikar\",\n\t\"twitter\" : \"https://twitter.com/pkw97\",\n\t\"facebook\" : \"https://twitter.com/pkw97\",\n\t\"youtube\" : \"https://youtube.com/pkw97\"\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get logged-in users profile",
+			"request": {
+				"url": "http://localhost:5000/api/profile/me",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBhYzg3ODQzNDFlNzExMmUxNjEyNmYxIn0sImlhdCI6MTYyMTkxOTY3MCwiZXhwIjoxNjIxOTU1NjcwfQ.Un1iFnpVs489qmEv8yuwTRmLLTafhmOkfI_6NrswCl0",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get all profiles",
+			"request": {
+				"url": "http://localhost:5000/api/profile",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get profile by userid",
+			"request": {
+				"url": "http://localhost:5000/api/profile/user/60ac8784341e7112e16126f1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete the profile",
+			"request": {
+				"url": "http://localhost:5000/api/profile",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBiMDgwYzhhMTE0MjMxNDFkY2I3MjhlIn0sImlhdCI6MTYyMjE4MDA0MCwiZXhwIjoxNjIyMjE2MDQwfQ.pJC_OYWhhTud9Lsq6E6qmHMkojmJ6cR8TxhZKiv_WUg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add experience",
+			"request": {
+				"url": "http://localhost:5000/api/profile/experience",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBhYzg3ODQzNDFlNzExMmUxNjEyNmYxIn0sImlhdCI6MTYyMjYxMDUyNSwiZXhwIjoxNjIyNjQ2NTI1fQ.FqzIWP1fT9nHjespmFm3hvnaDa1rmfaoCXbsDU-KG9g",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"senior product manager\",\n\t\"company\": \"globant\",\n\t\"location\": \"india\",\n\t\"from\": \"12-3-2021\",\n\t\"current\": true,\n\t\"description\": \"manage projects nicely\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add education",
+			"request": {
+				"url": "http://localhost:5000/api/profile/experience",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBhYzg3ODQzNDFlNzExMmUxNjEyNmYxIn0sImlhdCI6MTYyMjYxMDUyNSwiZXhwIjoxNjIyNjQ2NTI1fQ.FqzIWP1fT9nHjespmFm3hvnaDa1rmfaoCXbsDU-KG9g",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"senior product manager\",\n\t\"company\": \"globant\",\n\t\"location\": \"india\",\n\t\"from\": \"12-3-2021\",\n\t\"current\": true,\n\t\"description\": \"manage projects nicely\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete the experience",
+			"request": {
+				"url": "http://localhost:5000/api/profile/experience/60b7199ecc8781588239d010",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBhYzg3ODQzNDFlNzExMmUxNjEyNmYxIn0sImlhdCI6MTYyMjYxMDUyNSwiZXhwIjoxNjIyNjQ2NTI1fQ.FqzIWP1fT9nHjespmFm3hvnaDa1rmfaoCXbsDU-KG9g",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete the education",
+			"request": {
+				"url": "http://localhost:5000/api/profile/experience/60b7199ecc8781588239d010",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBhYzg3ODQzNDFlNzExMmUxNjEyNmYxIn0sImlhdCI6MTYyMjYxMDUyNSwiZXhwIjoxNjIyNjQ2NTI1fQ.FqzIWP1fT9nHjespmFm3hvnaDa1rmfaoCXbsDU-KG9g",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get github repos",
+			"request": {
+				"url": "http://localhost:5000/api/profile/github/pranavwaikar",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

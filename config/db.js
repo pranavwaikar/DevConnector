@@ -6,7 +6,7 @@ const logger = require('./logger');
 
 const connectDB = async () => {
     try{
-        await mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true});
+        await mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false});
         logger.info('Connected to mongodb atlas..');
     } catch (err) {
         logger.error(`Not able to connect to mongodb atlas - ${err}`);
