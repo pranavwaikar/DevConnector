@@ -11,6 +11,8 @@
     "lint:fix": "eslint routes/ middleware/ config/ *.js --fix",
     "prettier:fix": "prettier --write 'routes/**/*.js' 'middleware/**/*.js' 'config/**/*.js' '*.js'",
     "ci": "npm-run-all lint prettier",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
