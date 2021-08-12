@@ -8,7 +8,7 @@ const ProfileSchema = new mongoose.Schema({
   company: {
     type: String,
   },
-  webiste: {
+  website: {
     type: String,
   },
   location: {
