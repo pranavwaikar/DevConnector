@@ -1,0 +1,673 @@
+{
+	"info": {
+		"_postman_id": "4a5f8db2-2f12-4465-b29f-979e476409f8",
+		"name": "DevConnector",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Profiles",
+			"item": [
+				{
+					"name": "create and update profiles",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBiMDgwYzhhMTE0MjMxNDFkY2I3MjhlIn0sImlhdCI6MTYyMjE4MDA0MCwiZXhwIjoxNjIyMjE2MDQwfQ.pJC_OYWhhTud9Lsq6E6qmHMkojmJ6cR8TxhZKiv_WUg"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"status\": \"Developer\",\n\t\"skills\": \"HTML, css, js,, python\",\n\t\"company\": \"globant\",\n\t\"website\": \"www.pranav.com\",\n\t\"location\": \"nagar\",\n\t\"bio\": \"new developer at globant\",\n\t\"githubusername\": \"pranavwaikar\",\n\t\"twitter\" : \"https://twitter.com/pkw97\",\n\t\"facebook\" : \"https://twitter.com/pkw97\",\n\t\"youtube\" : \"https://youtube.com/pkw97\"\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get logged-in users profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBhYzg3ODQzNDFlNzExMmUxNjEyNmYxIn0sImlhdCI6MTYyMTkxOTY3MCwiZXhwIjoxNjIxOTU1NjcwfQ.Un1iFnpVs489qmEv8yuwTRmLLTafhmOkfI_6NrswCl0"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/profile/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"profile",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all profiles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get profile by userid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/profile/user/60ac8784341e7112e16126f1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"profile",
+								"user",
+								"60ac8784341e7112e16126f1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete the profile",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBiMDgwYzhhMTE0MjMxNDFkY2I3MjhlIn0sImlhdCI6MTYyMjE4MDA0MCwiZXhwIjoxNjIyMjE2MDQwfQ.pJC_OYWhhTud9Lsq6E6qmHMkojmJ6cR8TxhZKiv_WUg"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add experience",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBhYzg3ODQzNDFlNzExMmUxNjEyNmYxIn0sImlhdCI6MTYyMjYxMDUyNSwiZXhwIjoxNjIyNjQ2NTI1fQ.FqzIWP1fT9nHjespmFm3hvnaDa1rmfaoCXbsDU-KG9g"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"senior product manager\",\n\t\"company\": \"globant\",\n\t\"location\": \"india\",\n\t\"from\": \"12-3-2021\",\n\t\"current\": true,\n\t\"description\": \"manage projects nicely\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/profile/experience",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"profile",
+								"experience"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add education",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBhYzg3ODQzNDFlNzExMmUxNjEyNmYxIn0sImlhdCI6MTYyMjYxMDUyNSwiZXhwIjoxNjIyNjQ2NTI1fQ.FqzIWP1fT9nHjespmFm3hvnaDa1rmfaoCXbsDU-KG9g"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"senior product manager\",\n\t\"company\": \"globant\",\n\t\"location\": \"india\",\n\t\"from\": \"12-3-2021\",\n\t\"current\": true,\n\t\"description\": \"manage projects nicely\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/profile/experience",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"profile",
+								"experience"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete the education",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBhYzg3ODQzNDFlNzExMmUxNjEyNmYxIn0sImlhdCI6MTYyMjYxMDUyNSwiZXhwIjoxNjIyNjQ2NTI1fQ.FqzIWP1fT9nHjespmFm3hvnaDa1rmfaoCXbsDU-KG9g"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/profile/experience/60b7199ecc8781588239d010",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"profile",
+								"experience",
+								"60b7199ecc8781588239d010"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete the experience",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBhYzg3ODQzNDFlNzExMmUxNjEyNmYxIn0sImlhdCI6MTYyMjYxMDUyNSwiZXhwIjoxNjIyNjQ2NTI1fQ.FqzIWP1fT9nHjespmFm3hvnaDa1rmfaoCXbsDU-KG9g"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/profile/experience/60b7199ecc8781588239d010",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"profile",
+								"experience",
+								"60b7199ecc8781588239d010"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get github repos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/profile/github/pranavwaikar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"profile",
+								"github",
+								"pranavwaikar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users & Auth",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"pranavtest\",\n\t\"email\": \"pranavwaikartest@gmail.com\",\n\t\"password\": \"password1234\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"pranavwaikar@gmail.com\",\n\t\"password\": \"password1234\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get auth user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": true
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBhYzg3ODQzNDFlNzExMmUxNjEyNmYxIn0sImlhdCI6MTYyNTI5ODY2OSwiZXhwIjoxNjI1MzM0NjY5fQ.QtAxi-6rm9UhlWOITP6Yusrq6pEhcj-EQqKs1MoEApQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Create new post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "{{JWT}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"some of the random text\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all posts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "{{JWT}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get post by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "{{JWT}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/posts/60e03d826149c4307ceb1ea3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								"60e03d826149c4307ceb1ea3"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete post by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "{{JWT}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/posts/60e0486b39be0336003cc118",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								"60e0486b39be0336003cc118"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unlike a post by id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "{{JWT}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/posts/like/60e04b581d64c8375b453ac8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								"like",
+								"60e04b581d64c8375b453ac8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "like a post by id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "{{JWT}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/posts/like/60e04b581d64c8375b453ac8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								"like",
+								"60e04b581d64c8375b453ac8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comment on a post by id",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "{{JWT}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"some of the random text comment\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/posts/comment/60e04b581d64c8375b453ac8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								"comment",
+								"60e04b581d64c8375b453ac8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a comment on post by comment_id and post_id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "{{JWT}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/posts/comment/60e04b581d64c8375b453ac8/60e0503367823839ccfa7ff9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"posts",
+								"comment",
+								"60e04b581d64c8375b453ac8",
+								"60e0503367823839ccfa7ff9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "JWT",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBhYzg3ODQzNDFlNzExMmUxNjEyNmYxIn0sImlhdCI6MTYyNTMwOTk0NywiZXhwIjoxNjI1MzQ1OTQ3fQ.6Do1lqRNMeDmeFeSlarqcMHQ8Gw-1Y7DWmRI80UfDDA"
+		}
+	]
+}
